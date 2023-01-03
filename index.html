@@ -1,0 +1,71 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles.css">
+	<title>Parallax Scrolling Website</title>
+</head>
+<body>
+	<header>
+		<a href="#" class="logo"></a>
+		<ul>
+			<li><a href="#" class="active">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Work</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</header>
+	<section>
+		<img src="stars.png" id="stars">
+		<img src="moon.png" id="moon">
+		<img src="mountains_behind.png" id="mountains_behind">
+		<h1 id="text">Moon Light</h1>
+		<a href="#" id="btn">Explore</a>
+		<img src="mountains_front.png" id="mountains_front">
+	</section>
+
+	<div class="sec">
+		<h2>In the Moonlight</h2>
+		<p>HE picked a buttercup, and held it up to her chin. "Do you like butter?” he asked.
+
+“Butter!" she exclaimed. "They are not made into butter. They are made into crowns for the Queen; she has a new one every morning."
+
+"I'll make you a crown," he said. “You shall wear it to-night."
+
+" But where will my throne be ?" she asked.
+
+"It shall be on the middle step of the stile by the corn-field."
+
+So when the moon rose I went out to see.
+<br><br>
+He wore a red jacket and his cap with the feather in it. Round her head there was a wreath of buttercups; it was not much like a crown. On one side of the wreath there were some daisies, and on the other was a little bunch of blackberryblossom.
+
+<br><br>
+
+“Come and dance in the moonlight," he said ; so she climbed up and over the stile, and stood in the corn-field holding out her two hands to him. He took them in his, and then they danced round and round all down the pathway, while the wheat nodded wisely on either side, and the poppies awoke and wondered. On they went, on and on through the corn-field towards the broad green meadows stretching far into the distance. On and on, he shouting for joy, and she laughing out so merrily that the sound travelled to the edge of the wood, and the thrushes heard, and dreamed of Spring. On they went, on and on, and round and round, he in his red jacket, and she with the wild flowers dropping one by one from her wreath. On and on in the moonlight, on and on till they had danced all down the corn-field, till they had crossed the green meadows, till they were hidden in the mist beyond.</p>
+	</div>
+<script>
+	let stars = document.getElementById('stars');
+	let moon = document.getElementById('moon');
+	let mountains_behind = document.getElementById('mountains_behind');
+	let mountains_front = document.getElementById('mountains_front');
+	let text = document.getElementById('text');
+	let btn = document.getElementById('btn');
+
+	window.addEventListener('scroll', function(){
+	let value = window.scrollY;
+	stars.style.left = value * 0.25 + 'px';
+	moon.style.top = value * 1.05 +'px';
+	mountains_behind.style.top = value * 0.5 +'px';
+	mountains_front.style.top = value * 0 +'px';
+	text.style.marginRight = value * 4 +'px';
+	text.style.marginTop = value * 1.5 +'px';
+	btn.style.marginTop = value * 1.5 +'px';
+	header.style.marginTop = value * 0.5 +'px';
+})
+</script>
+
+</body>
+</html>
